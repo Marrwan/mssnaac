@@ -16,10 +16,10 @@ router.get("/",  async(req, res,)=> {
   MSSNNews.find({}, (err, mssnnews)=>{
     AcademicNews.find({}, (err, academicnews)=>{
       ScholarshipNews.find({}, (err, scholarshipnews)=>{
-        //  request('https://type.fit/api/quotes', function (error, response, body) {
-            // var data =  JSON.parse(body)
+         request('https://type.fit/api/quotes', function (error, response, body) {
+            var data =  JSON.parse(body)
             res.render("index", {mssnnews, academicnews, scholarshipnews});
-          // });
+          });
         })
     })
   });
