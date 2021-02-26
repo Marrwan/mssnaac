@@ -18,8 +18,8 @@ require("./config/passport")(passport);
 const app = express();
 
 //db
-// const db = process.env.mongoURI;
-const db = require("./config/config").mongoURI;
+const db = process.env.mongoURI;
+// const db = require("./config/config").mongoURI;
 mongoose
   .connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("server connected"));
